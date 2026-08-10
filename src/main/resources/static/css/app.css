@@ -1,0 +1,260 @@
+/* Gaya tampilan mengikuti mockup dokumen soal:
+   panel filter berlatar oranye muda, tombol biru di kanan, header tabel biru. */
+
+body {
+    background-color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.app-wrapper {
+    padding: 20px;
+}
+
+.app-card {
+    border: 1px solid #000000;
+    padding: 18px 22px 24px;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+/* Ikon folder biru muda pada mockup */
+.app-logo {
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background-color: #7ec8f0;
+    border-radius: 2px;
+}
+
+.app-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.filter-panel {
+    background-color: #fce4d6;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+}
+
+.filter-fields {
+    max-width: 420px;
+}
+
+.filter-label {
+    font-weight: 700;
+    color: #1f4e79;
+    margin-bottom: 4px;
+}
+
+.filter-panel .form-control {
+    max-width: 320px;
+    border: 1px solid #7f7f7f;
+    border-radius: 2px;
+}
+
+.action-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn-aksi {
+    min-width: 120px;
+    background-color: #2e75b6;
+    border-color: #2e75b6;
+    border-radius: 2px;
+}
+
+.btn-aksi:hover,
+.btn-aksi:focus {
+    background-color: #1f5c95;
+    border-color: #1f5c95;
+}
+
+.table-data {
+    margin-bottom: 8px;
+}
+
+.table-data thead th {
+    background-color: #2e75b6;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    border-color: #1f4e79;
+    white-space: nowrap;
+}
+
+.table-data td {
+    border-color: #9dc3e6;
+}
+
+.table-data .kolom-no {
+    width: 44px;
+}
+
+.table-data .kolom-action {
+    width: 150px;
+}
+
+.sel-tengah {
+    text-align: center;
+}
+
+/* Tautan aksi: Detail dan Edit biru, Delete merah, sesuai mockup */
+.aksi-link {
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 6px;
+}
+
+.aksi-link:last-child {
+    margin-right: 0;
+}
+
+.aksi-detail,
+.aksi-edit {
+    color: #2e75b6;
+}
+
+.aksi-delete {
+    color: #c00000;
+}
+
+.aksi-link:hover {
+    text-decoration: underline;
+}
+
+.baris-kosong {
+    text-align: center;
+    font-style: italic;
+    color: #7f7f7f;
+    padding: 18px 0;
+}
+
+/* ---------- Halaman form ---------- */
+
+.form-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.form-dua-kolom {
+    max-width: 1000px;
+}
+
+.form-group-kendaraan {
+    margin-bottom: 18px;
+}
+
+.label-field {
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.form-group-kendaraan .form-control,
+.form-group-kendaraan .form-select {
+    max-width: 380px;
+    border: 1px solid #7f7f7f;
+    border-radius: 2px;
+}
+
+/* Field yang readonly tetap terbaca jelas, sekaligus terlihat terkunci */
+.field-terkunci,
+.form-control[readonly] {
+    background-color: #f2f2f2;
+}
+
+.pesan-error {
+    color: #c00000;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+/* Bootstrap menyembunyikan .invalid-feedback bila tidak bersebelahan dengan
+   input yang is-invalid; kelas sendiri dipakai agar pesan selalu tampil. */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #c00000;
+}
+
+.form-tombol {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btn-kembali {
+    min-width: 120px;
+    background-color: #a6a6a6;
+    border-color: #a6a6a6;
+    border-radius: 2px;
+}
+
+.btn-kembali:hover,
+.btn-kembali:focus {
+    background-color: #8c8c8c;
+    border-color: #8c8c8c;
+}
+
+#pesanGlobal {
+    max-width: 1000px;
+    border-radius: 2px;
+}
+
+/* ---------- Modal konfirmasi hapus ---------- */
+
+.modal-hapus {
+    border: 1px solid #7f7f7f;
+    border-radius: 3px;
+}
+
+.modal-hapus .modal-body {
+    padding: 22px 24px 20px;
+    text-align: center;
+}
+
+.modal-hapus #modalHapusLabel {
+    font-size: 14px;
+}
+
+.btn-modal {
+    min-width: 72px;
+    border-radius: 2px;
+}
+
+.btn-modal.btn-primary {
+    background-color: #2e75b6;
+    border-color: #2e75b6;
+}
+
+.btn-modal.btn-secondary {
+    background-color: #a6a6a6;
+    border-color: #a6a6a6;
+}
+
+.toast-wrapper {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1080;
+    max-width: 380px;
+}
+
+.toast-wrapper .alert {
+    border-radius: 3px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}

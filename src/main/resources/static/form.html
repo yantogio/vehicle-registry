@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aplikasi Data Kendaraan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container-fluid app-wrapper">
+    <div class="app-card">
+
+        <div class="app-header">
+            <span class="app-logo"></span>
+        </div>
+
+        <!-- Judul menyesuaikan mode: Tambah / Edit / Detail Data Kendaraan -->
+        <h2 class="form-title" id="judulForm">Data Kendaraan</h2>
+
+        <!-- Pesan tingkat halaman: mode tidak dikenali, data tidak ditemukan,
+             noRegistrasi duplikat, atau kegagalan lain yang bukan per field -->
+        <div class="alert alert-danger d-none" id="pesanGlobal" role="alert"></div>
+
+        <form id="formKendaraan" novalidate>
+            <div class="row form-dua-kolom" id="areaForm">
+
+                <!-- Kolom kiri -->
+                <div class="col-md-6">
+                    <div class="form-group-kendaraan">
+                        <label for="noRegistrasi" class="form-label label-field">No. Registrasi Kendaraan</label>
+                        <input type="text" class="form-control" id="noRegistrasi" name="noRegistrasi"
+                               maxlength="50" autocomplete="off">
+                        <div class="pesan-error" id="error-noRegistrasi"></div>
+                    </div>
+
+                    <div class="form-group-kendaraan">
+                        <label for="namaPemilik" class="form-label label-field">Nama Pemilik</label>
+                        <input type="text" class="form-control" id="namaPemilik" name="namaPemilik"
+                               maxlength="100" autocomplete="off">
+                        <div class="pesan-error" id="error-namaPemilik"></div>
+                    </div>
+
+                    <div class="form-group-kendaraan">
+                        <label for="merkKendaraan" class="form-label label-field">Merk Kendaraan</label>
+                        <input type="text" class="form-control" id="merkKendaraan" name="merkKendaraan"
+                               maxlength="100" autocomplete="off">
+                        <div class="pesan-error" id="error-merkKendaraan"></div>
+                    </div>
+
+                    <div class="form-group-kendaraan">
+                        <label for="alamat" class="form-label label-field">Alamat Pemilik Kendaraan</label>
+                        <textarea class="form-control" id="alamat" name="alamat" rows="4"
+                                  maxlength="500"></textarea>
+                        <div class="pesan-error" id="error-alamat"></div>
+                    </div>
+                </div>
+
+                <!-- Kolom kanan -->
+                <div class="col-md-6">
+                    <div class="form-group-kendaraan">
+                        <label for="tahunPembuatan" class="form-label label-field">Tahun Pembuatan</label>
+                        <!-- maxlength diabaikan browser pada input number, jadi batas
+                             4 digit dijaga lewat min/max; nilai max diisi tahun
+                             berjalan oleh JavaScript agar konsisten dengan server -->
+                        <input type="number" class="form-control" id="tahunPembuatan" name="tahunPembuatan"
+                               min="1900" step="1" autocomplete="off">
+                        <div class="pesan-error" id="error-tahunPembuatan"></div>
+                    </div>
+
+                    <div class="form-group-kendaraan">
+                        <label for="kapasitasSilinder" class="form-label label-field">Kapasitas Silinder</label>
+                        <input type="number" class="form-control" id="kapasitasSilinder" name="kapasitasSilinder"
+                               min="1" step="1" autocomplete="off">
+                        <div class="pesan-error" id="error-kapasitasSilinder"></div>
+                    </div>
+
+                    <div class="form-group-kendaraan">
+                        <label for="warnaKendaraan" class="form-label label-field">Warna Kendaraan</label>
+                        <select class="form-select" id="warnaKendaraan" name="warnaKendaraan">
+                            <option value="">Pilih Warna</option>
+                            <option value="Merah">Merah</option>
+                            <option value="Hitam">Hitam</option>
+                            <option value="Biru">Biru</option>
+                            <option value="Abu-Abu">Abu-Abu</option>
+                        </select>
+                        <div class="pesan-error" id="error-warnaKendaraan"></div>
+                    </div>
+
+                    <div class="form-group-kendaraan">
+                        <label for="bahanBakar" class="form-label label-field">Bahan Bakar</label>
+                        <input type="text" class="form-control" id="bahanBakar" name="bahanBakar"
+                               maxlength="50" autocomplete="off">
+                        <div class="pesan-error" id="error-bahanBakar"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-tombol">
+                <button type="submit" class="btn btn-primary btn-aksi" id="btnSimpan">Simpan</button>
+                <button type="button" class="btn btn-secondary btn-kembali" id="btnKembali">Kembali</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Build output
+target/
+
+# Database H2 file-mode
+data/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Log
+*.log
