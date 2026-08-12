@@ -14,7 +14,7 @@ Sistem SHALL menyimpan data kendaraan pada tabel `kendaraan` yang memuat delapan
 
 ### Requirement: Sistem SHALL menyediakan seed data awal berisi lima baris kendaraan
 
-Sistem SHALL memuat lima baris seed data persis sesuai dokumen soal lewat kelas `DataSeeder` yang mengimplementasikan `CommandLineRunner`. Penyisipan MUST dilakukan hanya bila tabel masih kosong (`repository.count() == 0`), sehingga seeding tidak pernah menimpa atau memunculkan kembali data yang sudah disentuh pengguna. Alamat untuk `B-7763-TXY` MUST bernilai `Jl. Achmad Yani No 89 Jakarta Pusat`; alamat baris lain diisi nilai wajar.
+Sistem SHALL memuat lima baris seed data persis sesuai spesifikasi lewat kelas `DataSeeder` yang mengimplementasikan `CommandLineRunner`. Penyisipan MUST dilakukan hanya bila tabel masih kosong (`repository.count() == 0`), sehingga seeding tidak pernah menimpa atau memunculkan kembali data yang sudah disentuh pengguna. Alamat untuk `B-7763-TXY` MUST bernilai `Jl. Achmad Yani No 89 Jakarta Pusat`; alamat baris lain diisi nilai wajar.
 
 #### Scenario: Seed data tersedia setelah aplikasi start
 - **WHEN** aplikasi dijalankan pertama kali dan pengguna membuka halaman monitoring tanpa filter

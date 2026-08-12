@@ -76,10 +76,10 @@
 - [x] 7.4 Cantumkan daftar endpoint REST beserta aturan status error 400, 404, dan 409
 - [x] 7.5 Cantumkan bagian "Asumsi" yang memuat keputusan Warna Kendaraan sebagai dropdown dan Bahan Bakar sebagai text bebas, lengkap dengan alasannya
 - [x] 7.6 Cantumkan asumsi lain: nomor urut tampilan, sufiks `cc` sebagai presentasi, tahun berjalan yang dinamis, dan alamat seed data buatan sendiri
-- [x] 7.7 Cantumkan asumsi urutan tampilan: data diurutkan `noRegistrasi` ascending sehingga berbeda dari urutan pada mockup, karena dokumen soal tidak menyebutkan aturan pengurutan sedangkan pagination membutuhkan urutan deterministik
+- [x] 7.7 Cantumkan asumsi urutan tampilan: data diurutkan `noRegistrasi` ascending sehingga berbeda dari urutan pada mockup, karena spesifikasi tidak menyebutkan aturan pengurutan sedangkan pagination membutuhkan urutan deterministik
 - [x] 7.8 Jelaskan perilaku persistensi H2 file-mode: seluruh perubahan pengguna (tambah, ubah, hapus) bertahan antar restart karena `DataSeeder` hanya berjalan saat tabel kosong; sebutkan pula cara mengembalikan data ke kondisi awal, yaitu menghapus direktori `data/` lalu menjalankan ulang aplikasi
-- [x] 7.9 Cantumkan asumsi inkonsistensi warna B-7763-TXY: tabel Monitoring pada dokumen soal menyebut warna `Hitam` sedangkan mockup Edit menyebut `Merah`; seed data mengikuti tabel Monitoring karena tabel itulah yang memuat kelima baris data secara lengkap
-- [x] 7.10 Catat bahwa pagination server-side dan teks jumlah data ("Menampilkan X-Y dari Z data") adalah penambahan yang disengaja, karena mockup dokumen soal tidak menampilkan kontrol pagination sama sekali; alasannya agar tabel tetap terkendali saat jumlah data bertambah banyak
+- [x] 7.9 Cantumkan asumsi inkonsistensi warna B-7763-TXY: tabel Monitoring pada spesifikasi menyebut warna `Hitam` sedangkan mockup Edit menyebut `Merah`; seed data mengikuti tabel Monitoring karena tabel itulah yang memuat kelima baris data secara lengkap
+- [x] 7.10 Catat bahwa pagination server-side dan teks jumlah data ("Menampilkan X-Y dari Z data") adalah penambahan yang disengaja, karena mockup spesifikasi tidak menampilkan kontrol pagination sama sekali; alasannya agar tabel tetap terkendali saat jumlah data bertambah banyak
 
 ## 8. Unit Test Service (opsional — kerjakan hanya bila waktu tersisa setelah seluruh alur berfungsi)
 
@@ -91,7 +91,7 @@
 
 ## 9. Tes Manual Seluruh Alur
 
-- [x] 9.1 Jalankan aplikasi dari kondisi bersih (hapus direktori `data/`) dan verifikasi `DataSeeder` menyisipkan lima baris seed persis sesuai dokumen soal
+- [x] 9.1 Jalankan aplikasi dari kondisi bersih (hapus direktori `data/`) dan verifikasi `DataSeeder` menyisipkan lima baris seed persis sesuai spesifikasi
 - [x] 9.2 Restart aplikasi tanpa mengubah apa pun dan pastikan `DataSeeder` tidak berjalan lagi, sehingga jumlah baris tetap lima dan tidak muncul error primary key
 - [x] 9.3 **Uji persistensi file-mode**: tambahkan satu data baru lewat UI, hapus salah satu baris seed, ubah `namaPemilik` pada baris seed lain, lalu matikan dan jalankan ulang aplikasi — pastikan data baru MASIH ADA, baris yang dihapus TIDAK muncul kembali, dan perubahan `namaPemilik` tidak ditimpa
 - [x] 9.4 Panggil `GET /api/vehicles` tanpa parameter filter apa pun dan pastikan seluruh data tampil, bukan hasil kosong
