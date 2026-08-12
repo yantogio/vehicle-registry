@@ -1,5 +1,3 @@
-# Aplikasi Data Kendaraan
-
 Aplikasi CRUD data kendaraan bermotor: halaman monitoring dengan pencarian dan pagination,
 form tambah/ubah/detail, serta penghapusan data dengan konfirmasi modal.
 
