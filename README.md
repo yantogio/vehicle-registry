@@ -237,8 +237,6 @@ src/main/resources/
     ├── css/app.css
     └── js/monitoring.js, js/form.js
 ```
-#   A p p l i c a t i o n - D a t a - K e n d a r a a n  
- #   A p p l i c a t i o n - D a t a - K e n d a r a a n  
- "# Application-Data-Kendaraan" 
-#   A p p l i c a t i o n - D a t a - K e n d a r a a n  
+#   A p p l i c a t i o n - D a t a - K e n d a r a a n 
+ 
  
