@@ -2,6 +2,9 @@
 target/
 
 # Database H2 file-mode
+.claude/
+.agent/
+.codex/
 data/
 
 # IDE
