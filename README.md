@@ -142,7 +142,7 @@ path. Dengan begitu perubahan data tidak pernah membuat baris baru.
 
 ### 1. Warna Kendaraan dropdown, Bahan Bakar teks bebas
 
-Dokumen soal bertentangan dengan mockup-nya sendiri:
+Spesifikasi bertentangan dengan mockup-nya sendiri:
 
 | Sumber | Warna Kendaraan | Bahan Bakar |
 |---|---|---|
@@ -156,13 +156,13 @@ berupa teks bebas. Alasannya:
    **nama warna**, bukan jenis bahan bakar. Isi datanya sendiri menunjukkan label kolomnya tertukar.
 2. Mockup menampilkan placeholder "Pilih Warna" pada Warna Kendaraan (pola khas dropdown)
    dan nilai "Bensin" pada Bahan Bakar (pola khas text input).
-3. Seed data yang diminta dokumen soal berisi Bahan Bakar = "Bensin", yang tidak ada di daftar
-   dropdown tersebut. Jika daftar itu dipasang pada Bahan Bakar, seed data yang diminta dokumen
-   soal sendiri tidak akan bisa disimpan.
+3. Seed data yang diminta spesifikasi berisi Bahan Bakar = "Bensin", yang tidak ada di daftar
+   dropdown tersebut. Jika daftar itu dipasang pada Bahan Bakar, seed data yang diminta
+   spesifikasi itu sendiri tidak akan bisa disimpan.
 
 ### 2. Inkonsistensi warna B-7763-TXY
 
-Dokumen soal menyebut warna kendaraan `B-7763-TXY` secara berbeda di dua tempat: tabel
+Spesifikasi menyebut warna kendaraan `B-7763-TXY` secara berbeda di dua tempat: tabel
 Monitoring menulis **Hitam**, sedangkan mockup Edit menulis **Merah**. Seed data mengikuti
 **tabel Monitoring**, karena tabel itulah yang memuat kelima baris data secara lengkap.
 
@@ -190,25 +190,25 @@ dijaga lewat `min` dan `max`.
 ### 6. Urutan tampilan data
 
 Data diurutkan berdasarkan `noRegistrasi` **ascending**, sehingga urutannya berbeda dari urutan
-pada mockup dokumen soal. Dokumen soal tidak menyebutkan aturan pengurutan apa pun, sedangkan
+pada mockup spesifikasi. Spesifikasi tidak menyebutkan aturan pengurutan apa pun, sedangkan
 pagination membutuhkan urutan yang deterministik — tanpa `ORDER BY` eksplisit, database tidak
 menjamin urutan baris sehingga sebuah baris bisa muncul di dua halaman atau terlewat sama sekali.
 Kolom timestamp yang bisa dipakai merekonstruksi urutan input tidak dibuat karena di luar scope.
 
 ### 7. Pagination dan teks jumlah data adalah penambahan yang disengaja
 
-Mockup dokumen soal tidak menampilkan kontrol pagination sama sekali. Pagination server-side
+Mockup spesifikasi tidak menampilkan kontrol pagination sama sekali. Pagination server-side
 (default 10 baris per halaman) beserta teks "Menampilkan X-Y dari Z data" tetap ditambahkan agar
 tabel tetap terkendali saat jumlah data bertambah banyak.
 
 ### 8. Alamat seed data
 
-Hanya alamat `B-7763-TXY` yang ditentukan dokumen soal (`Jl. Achmad Yani No 89 Jakarta Pusat`).
+Hanya alamat `B-7763-TXY` yang ditentukan spesifikasi (`Jl. Achmad Yani No 89 Jakarta Pusat`).
 Alamat empat baris lainnya diisi nilai wajar buatan sendiri.
 
 ## Di Luar Scope
 
-Tidak dikerjakan karena tidak diminta dokumen soal: login/autentikasi, manajemen user & role,
+Tidak dikerjakan karena tidak diminta oleh spesifikasi: login/autentikasi, manajemen user & role,
 upload foto kendaraan, soft delete, audit trail/timestamp, export Excel/PDF, multi-bahasa,
 Docker, migrasi Flyway/Liquibase, CI/CD, dark mode, dan validasi format plat nomor Indonesia.
 
@@ -237,5 +237,3 @@ src/main/resources/
     ├── css/app.css
     └── js/monitoring.js, js/form.js
 ```
- 
- 
